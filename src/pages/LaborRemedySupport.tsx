@@ -178,7 +178,7 @@ export const LaborRemedySupport = () => {
                 최선의 결과 도출
               </h3>
               <p className="text-slate-600 leading-relaxed text-[15px]">
-                원직복직이든 금전보상이든 고객이 가장 원하는 결과를 얻으실 수 있도록 이유서 작성부터 심문회의 참석까지 전 과정을 책임지고 도와드리겠습니다.
+                원직복직이든 금전보상이든 고객이 가장 원하는 결과를 얻으실 수 있도록 이유서 작성부터 심문회의 참석까지 전 과정을 도와드리겠습니다.
               </p>
             </motion.div>
           </div>
