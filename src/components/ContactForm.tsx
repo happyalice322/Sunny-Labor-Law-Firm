@@ -97,10 +97,22 @@ export const ContactForm = ({
       return;
     }
 
+    // Determine endpoint strictly from environment variable (.env)
+    const formEndpoint =
+      import.meta.env.VITE_FORMSPREE_ENDPOINT ||
+      (import.meta.env.VITE_FORMSPREE_FORM_ID
+        ? `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_FORM_ID}`
+        : "");
+
+    if (!formEndpoint) {
+      alert("상담 문의 전송 설정(API Key)이 .env 파일에 구성되지 않았습니다. 관리자에게 문의해주세요.");
+      return;
+    }
+
     setFormStatus("sending");
     
     try {
-      const response = await fetch("https://formspree.io/f/xkoyyroq", {
+      const response = await fetch(formEndpoint, {
         method: "POST",
         body: formData,
         headers: {

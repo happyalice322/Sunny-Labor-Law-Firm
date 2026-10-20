@@ -57,6 +57,12 @@ export const SEO = ({
       <meta name="twitter:description" content={ogDescription || enrichedDescription} />
       <meta name="twitter:image" content="/src/assets/images/logo_sunny_labor_1779178911264.png" />
 
+      {/* Security Headers */}
+      <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+      <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()" />
+
       {/* Naver Specific */}
       <meta name="naver-site-verification" content="" />
     </Helmet>

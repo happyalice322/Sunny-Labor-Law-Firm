@@ -19,7 +19,20 @@ export const Footer = () => {
         </div>
         
         <div className="text-xs md:text-sm text-slate-400 flex flex-col items-start md:items-end gap-2">
-          <div>대표 노무사 노가영 | 문의 cpla.gynoh@gmail.com</div>
+          <div className="flex flex-wrap items-center gap-2 md:gap-3">
+            <span>대표 노무사 노가영</span>
+            <span>|</span>
+            <a href="mailto:cpla.gynoh@gmail.com" className="hover:text-slate-600 transition-colors">문의 cpla.gynoh@gmail.com</a>
+            <span>|</span>
+            <a 
+              href="https://blog.naver.com/sunnylaborlawfirm520" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#03C75A] font-medium hover:underline inline-flex items-center gap-1"
+            >
+              네이버 블로그
+            </a>
+          </div>
           <div>© 2026 노동법률사무소 맑은 All rights reserved.</div>
         </div>
       </div>

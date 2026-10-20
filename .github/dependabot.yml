@@ -1,0 +1,52 @@
+# ==============================================================================
+# GitHub Dependabot 설정 파일 (.github/dependabot.yml)
+# 주간 자동 의존성 업데이트 및 보안 취약점 자동 감지/알림 설정
+# ==============================================================================
+version: 2
+
+updates:
+  # 1. npm 패키지 의존성 주간 자동 업데이트
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly" # 매주 주기적으로 최신 버전 확인
+      day: "monday"      # 매주 월요일 실행
+      time: "09:00"      # 한국 시간 기준 오전 9시
+      timezone: "Asia/Seoul"
+    open-pull-requests-limit: 10
+    # 보안 및 일반 업데이트에 대한 커밋 메시지 규칙 설정
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    # 생성되는 PR에 자동 부여될 라벨
+    labels:
+      - "dependencies"
+      - "security"
+    # 마이너 및 패치 업데이트를 그룹화하여 PR이 과도하게 생성되는 것을 방지
+    groups:
+      production-dependencies:
+        patterns:
+          - "*"
+        dependency-type: "production"
+      dev-dependencies:
+        patterns:
+          - "*"
+        dependency-type: "development"
+    # 항상 최신 보안 권장 버전으로 업그레이드
+    versioning-strategy: "increase"
+
+  # 2. GitHub Actions 워크플로가 추가될 경우를 대비한 Actions 주간 업데이트
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Seoul"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci(actions)"
+      include: "scope"
+    labels:
+      - "ci"
+      - "security"

@@ -290,6 +290,28 @@ export const Home: React.FC = () => {
                     원칙을 지키는 것이 경영 리스크를 줄이고 근로자와 기업이 서로 win-win 할 수 있어 <br className="hidden md:block" /> 가장 큰 가치를 만드는 길임을 믿기에, 고객의 미래를 생각하는 긴 호흡으로 소통하겠습니다.
                   </p>
                 </div>
+
+                <div className="pt-8">
+                  <a
+                    href="https://blog.naver.com/sunnylaborlawfirm520"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3.5 px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/80 shadow-sm hover:shadow-md transition-all group"
+                  >
+                    <span className="w-8 h-8 rounded-xl bg-[#03C75A] flex items-center justify-center text-white shadow-sm shadow-[#03C75A]/30 group-hover:scale-105 transition-transform flex-shrink-0">
+                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M16.273 12.845 7.376 0H0v24h7.726V11.156L16.624 24H24V0h-7.727v12.845z" />
+                      </svg>
+                    </span>
+                    <div className="flex flex-col text-left">
+                      <span className="text-xs text-slate-400 font-medium">노동법률사무소 맑은 공식 블로그</span>
+                      <span className="text-sm font-bold text-slate-800 group-hover:text-[#03C75A] transition-colors flex items-center gap-1.5">
+                        네이버 블로그 바로가기
+                        <ArrowRight size={14} className="text-[#03C75A] group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
+                  </a>
+                </div>
               </motion.div>
             </div>
 
@@ -328,6 +350,8 @@ export const Home: React.FC = () => {
                           <li className="flex gap-2"><span>•</span> <span>서강대학교 신문방송학·심리학 학사</span></li>
                           <li className="flex gap-2"><span>•</span> <span>여성노동법률지원센터 직장 내 성희롱 예방 교육 강사 및 전문가 양성과정 수료</span></li>
                           <li className="flex gap-2"><span>•</span> <span>청소년 · 청년 근로권익 보호를 위한 상담 · 권리구제 사업 수행 노무사</span></li>
+                          <li className="flex gap-2"><span>•</span> <span>직장 내 괴롭힘 심의위원 및 채용 면접 위원</span></li>
+                          <li className="flex gap-2"><span>•</span> <span>인크루트 HR DIVE, 기고만장 Edge 7기 기고</span></li>
                           <li className="flex gap-2"><span>•</span> <span>노무법인 에이치 공인노무사</span></li>
                           <li className="flex gap-2"><span>•</span> <span>동화노무법인 공인노무사</span></li>
                           <li className="flex gap-2"><span>•</span> <span>삼양그룹(삼양홀딩스) HRC HRD</span></li>
@@ -346,6 +370,7 @@ export const Home: React.FC = () => {
                           <li className="flex gap-2"><span>•</span> <span>공공, 광고, 방송 등 기업 성희롱 예방 교육 및 강의 다수</span></li>
                           <li className="flex gap-2"><span>•</span> <span>방송, 게임, 광고, 캐릭터업 등 기업 노무 컨설팅 다수</span></li>
                           <li className="flex gap-2"><span>•</span> <span>근로자성 노동청 사건 및 부당징계·해고 사용자 대리 다수</span></li>
+                          <li className="flex gap-2"><span>•</span> <span>직장 내 괴롭힘 ·성희롱 노동청 근로자 대리 등</span></li>
                         </ul>
                       </div>
                     </div>
